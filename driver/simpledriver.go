@@ -13,7 +13,7 @@ package driver
 import (
 	"fmt"
 	"time"
-
+	"math/rand"
 	ds_models "github.com/edgexfoundry/device-simple/pkg/models"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients/logging"
 	"github.com/edgexfoundry/go-mod-core-contracts/models"
@@ -51,7 +51,7 @@ func (s *SimpleDriver) HandleReadCommands(addr *models.Addressable, reqs []ds_mo
 
 	res = make([]*ds_models.CommandValue, 1)
 	now := time.Now().UnixNano() / int64(time.Millisecond)
-	cv, _ := ds_models.NewBoolValue(&reqs[0].RO, now, s.switchButton)
+	cv, _ := ds_models.NewInt32Value(&reqs[0].RO, now, int32(rand.Intn(100)))
 	res[0] = cv
 
 	return

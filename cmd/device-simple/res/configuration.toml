@@ -1,6 +1,6 @@
 [Service]
 Host = "localhost"
-Port = 49990
+Port = 49992
 ConnectRetries = 3
 Labels = []
 OpenMsg = "device simple started"
@@ -52,37 +52,25 @@ EnableRemote = false
 File = "./device-simple.log"
 Level = "DEBUG"
 
-# Pre-define Devices
-[[DeviceList]]
-  Name = "Simple-Device01"
-  Profile = "Simple-Device"
-  Description = "Example of Simple Device"
-  Labels = [ "industrial" ]
-  [DeviceList.Addressable]
-    Address = "simple01"
-    Port = 300
-    Protocol = "OTHER"
-
 # Pre-define Schedule Configuration
 [[Schedules]]
 Name = "10sec-schedule"
 Frequency = "PT10S"
 
 [[ScheduleEvents]]
-Name = "turnOnSwitch"
-Parameters = "{\"Switch\": \"true\"}"
+Name = "readRandom"
 Schedule = "10sec-schedule"
   [ScheduleEvents.Addressable]
-  HTTPMethod = "PUT"
-  Path = "/api/v1/device/name/Simple-Device01/Switch"
-
-[[Schedules]]
-Name = "5sec-schedule"
-Frequency = "PT5S"
-
-[[ScheduleEvents]]
-Name = "readSwtich"
-Schedule = "5sec-schedule"
-  [ScheduleEvents.Addressable]
   HTTPMethod = "GET"
-  Path = "/api/v1/device/name/Simple-Device01/Switch"
+  Path = "/api/v1/device/name/RandNum-Device01/Random"
+
+# Pre-define Devices
+[[DeviceList]]
+  Name = "RandNum-Device01"
+  Profile = "RandNum-Device"
+  Description = "Random Number Generator Device"
+  Labels = [ "random", "test" ]
+  [DeviceList.Addressable]
+    Address = "random"
+    Port = 300
+    Protocol = "OTHER"
