@@ -1,4 +1,4 @@
-module github.com/edgexfoundry/device-sdk-go
+module github.com/edgexfoundry/device-simple
 
 require (
 	github.com/BurntSushi/toml v0.0.0-20170626110600-a368813c5e64

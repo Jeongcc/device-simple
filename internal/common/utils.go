@@ -14,7 +14,7 @@ import (
 	"net/http"
 	"time"
 
-	ds_models "github.com/edgexfoundry/device-sdk-go/pkg/models"
+	ds_models "github.com/edgexfoundry/device-simple/pkg/models"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients/types"
 	"github.com/edgexfoundry/go-mod-core-contracts/models"
 	"github.com/google/uuid"

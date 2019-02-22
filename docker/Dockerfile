@@ -14,9 +14,9 @@ RUN sed -e 's/dl-cdn[.]alpinelinux.org/nl.alpinelinux.org/g' -i~ /etc/apk/reposi
 # add git for go modules
 RUN apk add --update --no-cache make git gcc libc-dev
 
-WORKDIR /github.com/edgexfoundry/device-sdk-go
+WORKDIR /github.com/edgexfoundry/device-simple
 
-COPY . /github.com/edgexfoundry/device-sdk-go/
+COPY . /github.com/edgexfoundry/device-simple/
 
 RUN make build
 
@@ -27,6 +27,6 @@ FROM alpine:3.7
 LABEL license='SPDX-License-Identifier: Apache-2.0' \
   copyright='Copyright (c) 2018: Intel'
 
-COPY --from=builder /github.com/edgexfoundry/device-sdk-go/example/cmd/device-simple/device-simple /usr/local/bin/device-simple
+COPY --from=builder /github.com/edgexfoundry/device-simple/example/cmd/device-simple/device-simple /usr/local/bin/device-simple
 
 CMD [ "/usr/local/bin/device-simple" ]

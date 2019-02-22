@@ -14,8 +14,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/edgexfoundry/device-sdk-go"
-	ds_models "github.com/edgexfoundry/device-sdk-go/pkg/models"
+	"github.com/edgexfoundry/device-simple"
+	ds_models "github.com/edgexfoundry/device-simple/pkg/models"
 )
 
 var (

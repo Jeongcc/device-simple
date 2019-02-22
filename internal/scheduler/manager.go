@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/edgexfoundry/device-sdk-go/internal/cache"
-	"github.com/edgexfoundry/device-sdk-go/internal/common"
+	"github.com/edgexfoundry/device-simple/internal/cache"
+	"github.com/edgexfoundry/device-simple/internal/common"
 	"github.com/robfig/cron"
 )
 

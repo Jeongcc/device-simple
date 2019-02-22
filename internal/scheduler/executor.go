@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/edgexfoundry/device-sdk-go/internal/common"
-	"github.com/edgexfoundry/device-sdk-go/internal/handler"
+	"github.com/edgexfoundry/device-simple/internal/common"
+	"github.com/edgexfoundry/device-simple/internal/handler"
 	"github.com/edgexfoundry/go-mod-core-contracts/models"
 )
 

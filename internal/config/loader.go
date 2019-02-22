@@ -17,8 +17,8 @@ import (
 	"time"
 
 	"github.com/BurntSushi/toml"
-	"github.com/edgexfoundry/device-sdk-go/internal/common"
-	"github.com/edgexfoundry/device-sdk-go/internal/registry"
+	"github.com/edgexfoundry/device-simple/internal/common"
+	"github.com/edgexfoundry/device-simple/internal/registry"
 )
 
 const consulStatusPath = "/v1/agent/self"

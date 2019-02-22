@@ -3,7 +3,7 @@ package transformer
 import (
 	"testing"
 
-	"github.com/edgexfoundry/device-sdk-go/internal/common"
+	"github.com/edgexfoundry/device-simple/internal/common"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients/logging"
 )
 

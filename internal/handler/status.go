@@ -8,7 +8,7 @@
 package handler
 
 import (
-	"github.com/edgexfoundry/device-sdk-go/internal/common"
+	"github.com/edgexfoundry/device-simple/internal/common"
 )
 
 func StatusHandler() string {
